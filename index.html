@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MAB-SFDLS Cloud MRI Segmentation Platform</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><span class="logo">M</span><div><b>MAB-SFDLS Cloud</b><small>Brain MRI Segmentation SaaS</small></div></div>
+    <nav>
+      <a class="active">Dashboard</a><a>DICOM Upload</a><a>Segmentation Jobs</a><a>3D Viewer</a><a>ROI Analysis</a><a>Export</a>
+    </nav>
+    <div class="secure"><b>Research prototype</b><span>De-identified MRI only • TLS upload • cloud execution</span></div>
+  </aside>
+  <main>
+    <header class="topbar">
+      <div><h1>Browser-based Brain MRI Analysis</h1><p>Cloud workflow for preprocessing, MAB-SFDLS segmentation, synchronized 2D viewing, 3D visualization, ROI interaction, and result export.</p></div>
+      <button>Export NIfTI / PNG / CSV</button>
+    </header>
+
+    <section class="workflow">
+      <div class="step done">1<br><b>Upload MRI</b><span>DICOM/NIfTI</span></div>
+      <div class="step done">2<br><b>Preprocess</b><span>bias + normalization</span></div>
+      <div class="step active">3<br><b>MAB-SFDLS</b><span>cloud segmentation</span></div>
+      <div class="step">4<br><b>Visualize</b><span>2D/3D + ROI</span></div>
+      <div class="step">5<br><b>Export</b><span>mask + metrics</span></div>
+    </section>
+
+    <section class="grid">
+      <div class="card viewer large">
+        <div class="cardhead"><b>Interactive MRI Viewer</b><span>Subject: MRBrains18-Case-04 • Axial slice 33</span></div>
+        <img src="assets/mri_contour_overlay.png" alt="MRI contour overlay" />
+        <div class="caption">Proposed MAB-SFDLS contour overlay after 2500 iterations.</div>
+      </div>
+      <div class="card metrics">
+        <div class="cardhead"><b>Segmentation Metrics</b><span>Current job: completed</span></div>
+        <div class="status"><span></span> Cloud job completed</div>
+        <div class="metric"><label>Dice</label><strong>0.95</strong></div>
+        <div class="metric"><label>IoU</label><strong>0.91</strong></div>
+        <div class="metric"><label>Specificity</label><strong>0.99</strong></div>
+        <div class="metric"><label>HD95</label><strong>low</strong></div>
+      </div>
+      <div class="card tri">
+        <div class="cardhead"><b>Input / GT / Output</b><span>Qualitative comparison</span></div>
+        <div class="minirow"><figure><img src="assets/mri_original.png"><figcaption>Original MRI</figcaption></figure><figure><img src="assets/gt_mask.png"><figcaption>Ground truth</figcaption></figure><figure><img src="assets/mab_mask.png"><figcaption>MAB-SFDLS</figcaption></figure></div>
+      </div>
+      <div class="card viewer">
+        <div class="cardhead"><b>3D / Level-set Surface</b><span>Interpretable evolution output</span></div>
+        <img src="assets/levelset_surface.png" alt="Level set surface" />
+      </div>
+      <div class="card full">
+        <div class="cardhead"><b>Batch Comparison Panel</b><span>White-matter segmentation across methods; proposed result shown in final column.</span></div>
+        <img src="assets/figure13_grid.png" alt="Batch segmentation comparison" />
+      </div>
+    </section>
+  </main>
+</body>
+</html>
