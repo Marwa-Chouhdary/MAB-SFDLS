@@ -1,1 +1,0 @@
-Open index.html in a browser. Replace assets with your own de-identified MRI screenshots if available. Use browser full-page screenshot for manuscript Figure X. Do not claim this is a deployed clinical product unless it is actually deployed.
